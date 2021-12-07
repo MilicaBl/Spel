@@ -9,6 +9,7 @@ let player = document.createElement("div");
 player.id = "player";
 //key 1 eller 2 + knapp 1 och 2 
 
+
 let buttonOne = document.createElement("button");
 buttonOne.innerText = "1"
 let buttonTwo = document.createElement("button");
@@ -21,9 +22,19 @@ startButton.innerText = "PLAY"
 let result = document.createElement("div");
 result.innerText = "Welcome to the Random 1-2 Game";
 result.id = "result";
+=======
+    // div för timer
+    let timer= document.createElement("div");
+    timer.id="timer";
+
+    // variabel
+    let second = 0;
+
+
+
 
 playGround.append(player)
-document.body.append(buttonOne, buttonTwo, startButton, result)
+document.body.append(buttonOne, buttonTwo, startButton, timer, result)
 
 
 //Slumpgenerator 1 eller 2 --grupp 1
@@ -94,6 +105,15 @@ buttonTwo.addEventListener("click", function () {
 
 
 //setInterval startklocka --grupp2
+startButton.addEventListener("click", () => {
+    
+    setInterval(function() {
+        second++
+        timer.innerHTML = second;
+        console.log(second);
+    }, 1000);
+});
+
 
 //if slumpad siffra ett steg framåt annars stå kvar --grupp1
 
