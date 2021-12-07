@@ -15,7 +15,13 @@
     right: 50%;
 }
 body{
-    background-color: black;
+
+    background-color:black;
+}
+
+#result{
+    background-color: yellow;
+=======
 }
 #timer {
     width: 50px;
@@ -25,4 +31,5 @@ body{
     right: 10px;
     border: 1px solid black;
     background-color: aqua;
+
 }
