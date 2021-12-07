@@ -1,0 +1,19 @@
+#playGround{
+    width:600px;
+    height: 900px;
+    background-color: aquamarine;
+    position: relative;
+}
+
+#player{
+    position: absolute;
+    width: 30px;
+    height:50px;
+    background-color: coral;
+    bottom:0;
+    transform: translateX(-50%);
+    right: 50%;
+}
+body{
+    background-color:black;
+}
