@@ -1,19 +1,25 @@
-#playGround{
-    width:600px;
-    height: 900px;
-    background-color: aquamarine;
-    position: relative;
+#playGround {
+  width: 600px;
+  height: 900px;
+  background: url(img/bana.png) no-repeat;
+  position: relative;
 }
 
-#player{
-    position: absolute;
-    width: 30px;
-    height:50px;
-    background-color: coral;
-    bottom:0;
-    transform: translateX(-50%);
-    right: 50%;
+#player {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  background-color: coral;
+  bottom: 0;
+  transform: translateX(-50%);
+  right: 50%;
 }
-body{
-    background-color:black;
+body {
+  background-color: rgb(33, 81, 212);
+}
+
+button {
+  background-color: rgb(243, 24, 214);
+  color: white;
+  border: 1px solid black;
 }

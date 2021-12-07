@@ -32,4 +32,28 @@ document.body.append(buttonOne, butttonTwo, startButton)
 
 //När man är framme -grattis texten + byt smiley till glad gubbe+ ljud --grupp3 
 
+function finnish() {
+    // score = när man vinner
+    if (player == 10){           //poäng 
+
+    // ljud när någon går i mål
+    var sound = document.getElementById("sound");
+    sound.play();
+    console.log(sound);
+
+    //text när spelare går i mål
+    let finnishline = document.getElementById("text_finnishline");
+    finnishline.innerHTML = player + " " + "</ be>" + "<h2>garttis</h2>" 
+
+    console.log(finnishline);
+}
+}
+
+finnish();
+console.log(finnish);
+// kalla på funktionen
+
+sound.play();
+console.log(sound);
+
 // Om vi hinner gör 2 banor -tävling
