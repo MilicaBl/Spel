@@ -53,7 +53,10 @@ finnish();
 console.log(finnish);
 // kalla på funktionen
 
-sound.play();
-console.log(sound);
+ // ljud när någon går i mål
+ var sound = document.getElementById("sound");
+ sound.play();
+ console.log(sound);
+
 
 // Om vi hinner gör 2 banor -tävling
