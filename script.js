@@ -18,15 +18,30 @@ let playGround=document.getElementById("playGround")
     let startButton= document.createElement("button");   
     startButton.innerText="PLAY"
 
+    // div för timer
+    let timer= document.createElement("div");
+    timer.id="timer";
 
-playGround.append(player)
-document.body.append(buttonOne, butttonTwo, startButton)
+    // variabel
+    let second = 0;
+
+playGround.append(player);
+document.body.append(buttonOne, butttonTwo, startButton, timer);
 
 
 
 //Slumpgenerator 1 eller 2 --grupp 1
 
 //setInterval startklocka --grupp2
+startButton.addEventListener("click", () => {
+    
+    setInterval(function() {
+        second++
+        timer.innerHTML = second;
+        console.log(second);
+    }, 1000);
+});
+
 
 //if slumpad siffra ett steg framåt annars stå kvar --grupp1
 
