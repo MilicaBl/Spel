@@ -22,13 +22,13 @@ startButton.innerText = "PLAY"
 let result = document.createElement("div");
 result.innerText = "Welcome to the Random 1-2 Game";
 result.id = "result";
-=======
+
     // div för timer
     let timer= document.createElement("div");
     timer.id="timer";
 
     // variabel
-    let second = 0;
+    let second = 20;
 
 
 
@@ -52,12 +52,26 @@ document.addEventListener("keydown", e => {
 
     if (e.key == randomNr) {
         console.log("du gissade rätt");
-        bottom += 10;
+        bottom += 20;
         player.style.bottom = bottom + "px";
         createRandom(1, 2);
         randomNr = createRandom(1, 2);
         result.innerHTML = "Right, one step closer - keep on going!";
         console.log(randomNr);
+        console.log(player.style.bottom +"hej");
+
+        if (bottom == 740) {
+            console.log("grattis");
+            
+            //text när spelare går i mål
+            console.log("Hamnar i if-satsen")
+            //clearInterval(myTimer);
+            document.body.style.backgroundColor = "lightblue"
+            document.body.innerHTML = "VINNER"
+            document.body.style.color = "blue"
+
+            console.log("nu har vi nått 800 px");
+        }
     }
 
     else {
@@ -65,6 +79,7 @@ document.addEventListener("keydown", e => {
         result.innerHTML = "Wrong, try again";
     }
 
+    
 });
 
 //OM man klickar på "knapp1"
@@ -72,12 +87,25 @@ buttonOne.addEventListener("click", function () {
 
     if (randomNr == 1) {
         console.log("Du gissade rätt");
-        bottom += 10;
+        bottom += 20;
         player.style.bottom = bottom + "px";
         createRandom(1, 2);
         randomNr = createRandom(1, 2);
         result.innerHTML = "Right, one step closer - keep on going!";
         console.log(randomNr);
+
+        if (bottom == 740) {
+            console.log("grattis");
+            
+            //text när spelare går i mål
+            console.log("Hamnar i if-satsen")
+            //clearInterval(myTimer);
+            document.body.style.backgroundColor = "light blue"
+            document.body.innerHTML = "VINNER"
+            document.body.style.color = "blue"
+
+            console.log("nu har vi nått 800 px");
+        }
 
     } else {
         result.innerHTML = "Wrong, try again";
@@ -91,28 +119,57 @@ buttonTwo.addEventListener("click", function () {
 
     if (randomNr == 2) {
         console.log("Du gissade rätt");
-        bottom += 10;
+        bottom += 20;
         player.style.bottom = bottom + "px";
         createRandom(1, 2);
         randomNr = createRandom(1, 2);
         result.innerHTML = "Right, one step closer - keep on going!";
         console.log(randomNr);
+
+        if (bottom == 740) {
+            console.log("grattis");
+            //text när spelare går i mål
+            console.log("Hamnar i if-satsen")
+            //clearInterval(myTimer);
+            document.body.style.backgroundColor = "light blue"
+            document.body.innerHTML = "VINNER"
+            document.body.style.color = "blue"
+
+            console.log("nu har vi nått 800 px");
+        }
+
     } else {
         result.innerHTML = "Wrong, try again";
         console.log("Fel");
     }
-});
+}); 
 
 
 //setInterval startklocka --grupp2
 startButton.addEventListener("click", () => {
     
-    setInterval(function() {
-        second++
+    let myTimer = setInterval(function() {
+        second--
         timer.innerHTML = second;
         console.log(second);
+
+// setinterval
+if (second == 0) {
+
+    console.log("Hamnar i if-satsen")
+    clearInterval(myTimer);
+    document.body.style.backgroundColor = "black"
+    document.body.innerHTML = "GAME OVER"
+    document.body.style.color = "white"
+}
     }, 1000);
 });
+
+
+
+
+
+// Om vi hinner gör 2 banor -tävling
 
 
 //if slumpad siffra ett steg framåt annars stå kvar --grupp1
